@@ -2,7 +2,7 @@
 
 # --- Configuration ---
 # The OCID of the Security List to update.
-SEC_LIST_OCID="$Security_List"
+SEC_LIST_OCID="$Oracle_VCN_Security_List_OCID"
 
 # The description of the rule to update. This must be unique within the Security List.
 RULE_DESCRIPTION="ALLOW_HOME_NETWORK@NET28"
