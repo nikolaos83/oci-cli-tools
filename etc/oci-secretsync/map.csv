@@ -1,0 +1,4 @@
+# ocid,path,mode,container,signal
+ocid1.vaultsecret.oc1..aaaa...dbpass,/run/secrets/db_password,0600,myapp,HUP
+ocid1.vaultsecret.oc1..bbbb...smtpcred,/run/secrets/smtp_password,0600,mailrelay,USR1
+ocid1.vaultsecret.oc1..cccc...apikey,/run/secrets/my_api_key,0400,,
