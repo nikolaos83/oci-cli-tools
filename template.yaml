@@ -1,0 +1,14 @@
+services:
+  myapp:
+    image: ghcr.io/example/myapp:latest
+    # app reads from a file, not env:
+    environment:
+      DB_PASSWORD_FILE: /run/secrets/db_password
+    volumes:
+      - /run/secrets:/run/secrets:ro
+    # teach the app to reload on SIGHUP if possible (many do)
+    healthcheck:
+      test: ["CMD", "sh", "-c", "[ -f /run/secrets/db_password ]"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
